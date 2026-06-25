@@ -1,0 +1,53 @@
+.notes-widget { display: flex; flex-direction: column; }
+
+.notes-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.notes-stats {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.notes-saved {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--success);
+  animation: fadeIn 0.3s ease;
+}
+.notes-btn {
+  padding: 4px 12px;
+  font-size: 0.75rem;
+}
+
+.notes-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.notes-textarea {
+  width: 100%;
+  min-height: 120px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  padding: 14px 16px;
+  resize: vertical;
+  outline: none;
+  transition: border-color var(--transition);
+}
+.notes-textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+.notes-textarea::placeholder { color: var(--text-muted); line-height: 1.7; }
+
+.notes-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}

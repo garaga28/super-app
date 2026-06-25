@@ -1,0 +1,129 @@
+.reg-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.reg-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 960px;
+  width: 100%;
+  min-height: 600px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 8px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border);
+}
+
+/* ─── ART PANEL ─── */
+.reg-art {
+  background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 60%, #0c1a2e 100%);
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.reg-art-inner { position: relative; z-index: 1; }
+
+.reg-art-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.reg-art-icon { font-size: 1.4rem; }
+.reg-art-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  letter-spacing: 0.02em;
+}
+
+.reg-art-headline {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.reg-art-sub {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.reg-art-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reg-art-feature {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reg-art-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, transparent 70%);
+  bottom: -80px;
+  right: -80px;
+  pointer-events: none;
+}
+
+/* ─── FORM PANEL ─── */
+.reg-form-panel {
+  background: #0e1420;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reg-form-header {
+  margin-bottom: 32px;
+}
+.reg-form-header .badge {
+  margin-bottom: 12px;
+}
+.reg-form-header h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+.reg-form-header p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group { display: flex; flex-direction: column; }
+
+.reg-submit-btn {
+  margin-top: 8px;
+  width: 100%;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 700px) {
+  .reg-container { grid-template-columns: 1fr; }
+  .reg-art { display: none; }
+  .reg-form-panel { padding: 32px 24px; }
+}

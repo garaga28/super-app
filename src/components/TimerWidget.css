@@ -1,0 +1,111 @@
+.timer-widget { display: flex; flex-direction: column; transition: all 0.3s ease; }
+.timer-widget.timer-finished { border-color: var(--success); box-shadow: 0 0 20px rgba(16,185,129,0.15); }
+
+.timer-done-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--success);
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.3);
+  padding: 3px 10px;
+  border-radius: 20px;
+  animation: pulse 1s ease infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.timer-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Circle */
+.timer-circle-wrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+.timer-svg { width: 100%; height: 100%; }
+.timer-display {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timer-digits {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+}
+
+/* Inputs */
+.timer-inputs {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.timer-input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.timer-spin-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  width: 28px; height: 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.6rem;
+  transition: all var(--transition);
+  display: flex; align-items: center; justify-content: center;
+}
+.timer-spin-btn:hover { border-color: var(--accent); color: var(--accent-light); }
+
+.timer-input-val {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  width: 42px;
+  text-align: center;
+}
+.timer-input-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* Presets */
+.timer-presets {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.timer-preset {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: var(--font-body);
+}
+.timer-preset:hover {
+  background: var(--accent-glow);
+  border-color: var(--accent);
+  color: var(--accent-light);
+}
+
+/* Actions */
+.timer-actions { display: flex; gap: 8px; }
